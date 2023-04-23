@@ -3,7 +3,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-    <app-title title="Olá Mundo"></app-title>
+    <app-title *ngIf="destruir"></app-title>
+    <button (click)="destruirComponente()">Destruir Component</button>
     <hr>
     {{valor}}
     <button (click)="adicionar()">Adicionar</button>
@@ -11,13 +12,20 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   `
 })
 export class AppComponent implements OnInit,DoCheck, AfterContentChecked, AfterContentInit,AfterViewInit,AfterViewChecked {
+  //Variaveis
   public valor:number = 1;
+  public destruir:boolean = true;
+
   constructor(){
 
   }
 
   public adicionar(): number{
     return this.valor +=1;
+  }
+
+  public destruirComponente(): void {
+    this.destruir = !this.destruir
   }
 
   //sempre quando o component inicia é executado
