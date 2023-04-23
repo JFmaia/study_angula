@@ -16,6 +16,7 @@ export class TitleComponent implements OnInit, OnChanges{
 
   }
 
+  // Utilizado para capturar sempre que uma variavel for modificada!
   ngOnChanges(): void {
     alert("Foi alterado com sucesso");
   }
