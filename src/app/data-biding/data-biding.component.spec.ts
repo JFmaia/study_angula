@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleComponent } from './title.component';
+import { DataBidingComponent } from './data-biding.component';
 
-describe('TitleComponent', () => {
-  let component: TitleComponent;
-  let fixture: ComponentFixture<TitleComponent>;
+describe('DataBidingComponent', () => {
+  let component: DataBidingComponent;
+  let fixture: ComponentFixture<DataBidingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TitleComponent ]
+      declarations: [ DataBidingComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TitleComponent);
+    fixture = TestBed.createComponent(DataBidingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
