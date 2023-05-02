@@ -4,7 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
     <!-- <app-data-biding></app-data-biding> -->
-    <app-diretivas></app-diretivas>
+    <!-- <app-diretivas></app-diretivas> -->
+    <app-diretivas-atributos>
+      <h1>Olá seus Otarios</h1>
+      <hr>
+    </app-diretivas-atributos>
     <router-outlet></router-outlet>
   `
 })
