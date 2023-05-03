@@ -5,10 +5,11 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <!-- <app-data-biding></app-data-biding> -->
     <!-- <app-diretivas></app-diretivas> -->
-    <app-diretivas-atributos>
+    <!-- <app-diretivas-atributos>
       <h1>Olá seus Otarios</h1>
       <hr>
-    </app-diretivas-atributos>
+    </app-diretivas-atributos> -->
+    <app-new-component></app-new-component>
     <router-outlet></router-outlet>
   `
 })
