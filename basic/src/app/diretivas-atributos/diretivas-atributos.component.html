@@ -1,0 +1,9 @@
+<div>
+  <ng-content select="h1"></ng-content>
+  <h2 [ngClass]="{'active':valid, 'disabled': !valid}"> Olá mundo</h2>
+  <input type="text" [(ngModel)]="nome">
+  <ng-template ngFor let-item [ngForOf]="list">
+    {{item.nome}}
+  </ng-template>
+  <ng-content select="hr"></ng-content>
+</div>
