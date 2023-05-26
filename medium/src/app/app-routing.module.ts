@@ -11,8 +11,19 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'sobre/:id',
+    path:'sobre',
     component: SobreComponent,
+    children:[
+      {
+        path:':id',
+        component: SobreComponent
+      }
+    ]
+  },
+  //lazerloading
+  {
+    path:'dashboard',
+    loadChildren: ()=> import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
     path:'404',

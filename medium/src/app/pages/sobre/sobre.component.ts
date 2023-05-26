@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sobre',
@@ -7,9 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./sobre.component.sass']
 })
 export class SobreComponent implements OnInit {
-  constructor(private activatedRoute:ActivatedRoute){
-
-  }
+  constructor(
+    // Com isto conseguimos pergar parametros nas rotas.
+    private activatedRoute:ActivatedRoute,
+    //Utilizar para navergar com clicks
+    private router: Router
+  ){}
 
   ngOnInit():void{
     //pegar paramentros na rota
@@ -19,6 +22,10 @@ export class SobreComponent implements OnInit {
     //pega os dados da rota depois do &
     this.activatedRoute.queryParams.subscribe(
       res => console.log(res)
-    )
+    ),
+
+    setInterval(()=>{
+      this.router.navigate(['sobre']);
+    },5000)
   }
 }
