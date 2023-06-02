@@ -25,7 +25,7 @@ export class SobreComponent implements OnInit {
     ),
 
     setInterval(()=>{
-      this.router.navigate(['sobre']);
+      this.router.navigate(['']);
     },5000)
   }
 }
