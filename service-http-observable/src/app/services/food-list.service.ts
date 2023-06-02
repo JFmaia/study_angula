@@ -1,9 +1,13 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodListService {
+
+  //Criando um subscribe
+  public emitEvent = new EventEmitter();
+
   //Variaveis
   private list: Array<string> = [
     "X bacon",
@@ -19,6 +23,11 @@ export class FoodListService {
   }
 
   public foodListAdd(value:string){
+    this.foodListAlert(value);
     this.list.push(value);
+  }
+
+  public foodListAlert(value: string){
+    return this.emitEvent.emit(value);
   }
 }
