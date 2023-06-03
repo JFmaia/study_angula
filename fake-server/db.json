@@ -1,0 +1,19 @@
+{
+    "list-food":[
+        {   
+            "id":1,
+            "name": "X-bacon",
+            "value":18
+        },
+        {   
+            "id":2,
+            "name": "X-galinha",
+            "value":10
+        },
+        {   
+            "id":3,
+            "name": "X-bauru",
+            "value":15
+        }
+    ]
+}
