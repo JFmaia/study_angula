@@ -10,7 +10,7 @@ export class FoodAddComponent implements OnInit{
   constructor(private foodListService:FoodListService){}
 
   public listAddItem(value: string){
-    return this.foodListService.foodListAdd(value);
+    return console.log(value);
   }
 
   ngOnInit(): void {
