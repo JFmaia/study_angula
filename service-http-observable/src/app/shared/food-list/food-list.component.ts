@@ -13,6 +13,32 @@ export class FoodListComponent implements OnInit{
 
   constructor(private foodListService: FoodListService){}
 
+  public foodListDelete(id:number){
+    return this.foodListService.foodListDelete(id).subscribe({
+      next: (res) => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id
+          }
+        )
+      },
+      error: (error) =>{
+        console.log(error);
+      }
+    })
+  }
+
+  public foodListEdit(name:string,id:number){
+    return this.foodListService.foodListEdit(name,id).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: (error) =>{
+        console.log(error);
+      }
+    })
+  }
+
   ngOnInit(): void {
     this.foodListService.getFoodList().subscribe(
       {
