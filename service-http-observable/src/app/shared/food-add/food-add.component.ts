@@ -10,7 +10,14 @@ export class FoodAddComponent implements OnInit{
   constructor(private foodListService:FoodListService){}
 
   public listAddItem(value: string){
-    return console.log(value);
+    this.foodListService.foodListAdd(value).subscribe({
+      next: (res) => {
+        this.foodListService.foodListAlert(res)
+      },
+      error: (err) => {
+       console.log(err)
+      },
+    })
   }
 
   ngOnInit(): void {
